@@ -1,0 +1,246 @@
+:root {
+  --white: #fffbfb;
+  --black: #0d1117;
+  --semi-black: #0f172a;
+  --grey: #f0eef1;
+  --light-green: #60b564;
+  --dark-green: #388e3c;
+  --light-red: #f44336;
+  --border-radius: 10px;
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  --spacing-xl: 40px;
+  --container-width:1200px;
+  --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+/* Reset CSS */
+*::before,
+*::after,
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+/* Utilities */
+
+.container {
+  max-width: var(--container-width);
+  padding: var(--spacing-lg);
+  margin: 0 auto;
+}
+
+.container h1 {
+  text-align: center;
+  width: 100%;
+}
+
+.btn {
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius);
+  transition: filter 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover{
+  filter: brightness(90%);
+}
+
+.btn:active{
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-light-green {
+  background-color: var(--light-green);
+  font-size: 18px;
+}
+
+.btn-light-red {
+  background-color: var(--light-red);
+}
+
+.btn-add {
+  font-size: 24px;
+  background-color: var(--grey);
+}
+
+/* header */
+header {
+  background-color: var(--semi-black);
+  border-bottom: 1px solid #f0eef1;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logged-in,
+.logged-out {
+    display: none;
+}
+
+.logged-in:active,
+.logged-out:active {
+  display: flex;
+  gap: 20px;
+}
+
+/* main */
+
+.main {
+  text-align: left;
+  margin-left: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 15px;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  background-color: #222a74;
+  box-shadow: var(--shadow);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.col {
+  width: 100%;
+}
+
+/* footer */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg);
+}
+
+/* modal */
+
+.modal {
+  z-index: 1;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 500px;
+  height: 500px;
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  background-color: var(--semi-black);
+  text-align: center;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.2s ease-in-out;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal h3 {
+  margin-bottom: var(--spacing-md);
+  font-size: 30px;
+}
+
+.input {
+  border-radius: var(--border-radius);
+  width: 100%;
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.is-read {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--white);
+  margin-top: var(--spacing-sm);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay.active {
+  display: block;
+}
+
+.close-modal-btn {
+  cursor: pointer;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+}
+
+.submit-btn {
+  width: 100%;
+}
+
+/* loading ring */
+
+
+
+/* media queries */
+@media (max-width: 400px) {
+  .header .container {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    padding-top: var(--spacing-sm);
+  }
+
+  .main {
+    margin-top: var(--spacing-md);
+  }
+
+  :root {
+    --spacing-xl: 20px;
+  }
+}
