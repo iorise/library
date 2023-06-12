@@ -52,6 +52,7 @@ form.addEventListener("submit", function(e) {
     console.log("hello world")
     addBookToLibrary()
     render()
+    modal.classList.remove("active")
 })
 
 function render() {
