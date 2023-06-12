@@ -38,6 +38,7 @@ body {
   font-size: 15px;
   font-weight: 500;
   word-wrap: break-word;
+  margin-bottom: 100px;
 }
 
 /* Utilities */
@@ -138,6 +139,7 @@ header .container {
 /* footer */
 
 .footer {
+  width: 100%;
   position: absolute;
   bottom: 0;
   width: 100%;
