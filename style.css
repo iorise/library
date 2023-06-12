@@ -26,6 +26,11 @@
   box-sizing: border-box;
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   background-color: var(--black);
   color: var(--white);
@@ -90,22 +95,12 @@ header .container {
   justify-content: space-between;
 }
 
-.logged-in,
-.logged-out {
-  display: none;
-}
-
-.logged-in:active,
-.logged-out:active {
-  display: flex;
-  gap: 20px;
-}
-
 /* main */
 
 .main {
   text-align: left;
   margin-left: var(--spacing-xl);
+  margin-right: var(--spacing-xl);
   margin-top: var(--spacing-xl);
 }
 
