@@ -17,59 +17,59 @@
   <body>
     <!-- header -->
     <header class="header">
-        <div class="container">
-            <h1>My Library</h1>
-            <nav>
-                <div class="logged-out" id="loggedOut">
-                    <button class="btn" id="logInBtn">Log in</button>
-                </div>
-                <div class="logged-in" id="loggedIn">
-                    <button class="btn" id="logOutBtn">Log Out</button>
-                </div>
-            </nav>
-        </div>
+      <div class="container">
+        <h1>My Library</h1>
+      </div>
     </header>
     <!-- Main -->
     <main class="main">
-        <button class="btn btn-add" id="btnAdd">Add Book +</button>
-        <div class="books-grid" id="booksGrid"></div> 
+      <button class="btn btn-add" id="btnAdd">Add Book +</button>
+      <div class="books-grid" id="booksGrid"></div>
     </main>
     <!-- footer -->
     <footer class="footer">
-        <p>Copyright © 2023 iori</p>
+      <p>Copyright © 2023 iori</p>
     </footer>
     <!-- modal -->
     <div class="modal" id="addBookModal">
-        <form class="add-book-form" id="addBookForm">
-            <button type="button" class="btn close-modal-btn" id="closeModalBtn">x</button>
-            <h3>Add new</h3>
-            <input
-            class="input" 
-            type="text"
-            id="titleInput"
-            placeholder="title"
-            required
-            />
-            <input
-            class="input" 
-            type="text"
-            id="authorInput"
-            placeholder="author"
-            required
-            />
-            <input
-            class="input" 
-            type="number"
-            id="pagesInput"
-            placeholder="pages"
-            required
-            />
-            <div class="is-read" id="isReadDiv">
-                <label for="isReadInput">Have you read it ?</label>
-                <input class="checkbox" type="checkbox" id="isReadInput">
-            </div>
-            <button class="btn submit-btn btn-light-green" type="submit" id="submitBtn">Submit</button>
-        </form>
+      <form class="add-book-form" id="addBookForm">
+        <button type="button" class="btn close-modal-btn" id="closeModalBtn">
+          x
+        </button>
+        <h3>Add new</h3>
+        <input
+          class="input"
+          type="text"
+          id="titleInput"
+          placeholder="title"
+          required
+        />
+        <input
+          class="input"
+          type="text"
+          id="authorInput"
+          placeholder="author"
+          required
+        />
+        <input
+          class="input"
+          type="number"
+          id="pagesInput"
+          placeholder="pages"
+          required
+        />
+        <div class="is-read" id="isReadDiv">
+          <label for="isReadInput">Have you read it ?</label>
+          <input class="checkbox" type="checkbox" id="isReadInput" />
+        </div>
+        <button
+          class="btn submit-btn btn-light-green"
+          type="submit"
+          id="submitBtn"
+        >
+          Submit
+        </button>
+      </form>
     </div>
     <div id="output"></div>
     <!-- Another modal -->
